@@ -1,4 +1,3 @@
-# 1. Crear la lista vacía
 lista_compras = []
 
 # 2. Iniciar el bucle while
@@ -11,7 +10,6 @@ while opcion != "4":
     
     opcion = input("Selecciona una opción: ")
     
-    # 3. Estructura condicional if/elif/else
     if opcion == "1":
         item = input("¿Qué deseas agregar?: ")
         lista_compras.append(item)

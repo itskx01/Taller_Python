@@ -1,13 +1,9 @@
-# Inicializamos el inventario como una lista vacía
 inventario = []
-
 def agregar_producto():
-    """Crea un diccionario para un producto y lo añade a la lista del inventario."""
     nombre = input("Nombre del producto: ").strip().lower()
     precio = float(input("Precio del producto: "))
     cantidad = int(input("Cantidad inicial en stock: "))
     
-    # Creamos el diccionario con las claves requeridas
     nuevo_producto = {
         "nombre": nombre,
         "precio": precio,
@@ -19,15 +15,12 @@ def agregar_producto():
 
 
 def realizar_venta():
-    """Busca un producto por nombre y descuenta la cantidad si hay stock disponible."""
     nombre_buscar = input("¿Qué producto deseas vender?: ").strip().lower()
     
-    # Recorremos la lista de diccionarios
     for producto in inventario:
         if producto["nombre"] == nombre_buscar:
             cantidad_vender = int(input(f"¿Cuántas unidades de '{nombre_buscar}' vas a vender?: "))
             
-            # Validación de stock
             if producto["cantidad"] >= cantidad_vender:
                 producto["cantidad"] -= cantidad_vender  # Actualiza la cantidad
                 total = cantidad_vender * producto["precio"]
@@ -42,7 +35,6 @@ def realizar_venta():
 
 
 def mostrar_inventario():
-    """Muestra de forma ordenada todos los productos almacenados."""
     if not inventario:
         print("📭 El inventario está vacío.")
         return
@@ -54,7 +46,6 @@ def mostrar_inventario():
 
 
 def menu():
-    """Controla la interacción con el usuario mediante el menú."""
     while True:
         print("\n🏪 SYSTEMA DE GESTIÓN DE INVENTARIO")
         print("1. Agregar producto")
@@ -76,6 +67,5 @@ def menu():
         else:
             print("Opción inválida. Intenta de nuevo.")
 
-# Ejecución del programa
 if __name__ == "__main__":
     menu()

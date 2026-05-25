@@ -1,4 +1,3 @@
-# 1. Crear el diccionario vacío
 agenda = {}
 
 # --- FUNCIÓN 1: Añadir contacto ---
@@ -20,20 +19,13 @@ def mostrar_contactos():
     for nombre, telefono in agenda.items():
         print(f"- {nombre}: {telefono}")
 
-
-# === PRUEBA DEL PROGRAMA ===
-
-# Usamos input() para pedir datos (Requerimiento 1)
 nom = input("Introduce un nombre: ")
 tel = input("Introduce su teléfono: ")
 añadir_contacto(nom, tel)
 
-# Añadimos otro de forma directa para tener variedad
 añadir_contacto("Carlos", "3112345678")
 
-# Mostramos todo (Requerimiento 3)
 mostrar_contactos()
 
-# Buscamos uno (Requerimiento 2)
 nombre_buscar = input("\n¿A quién quieres buscar?: ")
 buscar_contacto(nombre_buscar)
