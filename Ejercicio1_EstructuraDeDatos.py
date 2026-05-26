@@ -1,3 +1,4 @@
+# Definimos una funcion 
 def analizar_calificaciones(calificaciones):
     if not calificaciones:
         return (0.0, 0.0, 0.0)
@@ -24,6 +25,7 @@ print("-" * 30)
 # Llamada a la función y desempaquetado de la tupla resultante
 promedio, maxima, minima = analizar_calificaciones(mis_calificaciones)
 
+# Mostrar resultados 
 print(f"Resultados del análisis:")
 print(f"• Promedio: {promedio:.2f}")
 print(f"• Calificación más alta: {maxima}")
