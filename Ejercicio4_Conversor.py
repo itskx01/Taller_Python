@@ -1,30 +1,42 @@
-factores = {
-    "metros_a_pies": 3.28084,
-    "pies_a_metros": 0.3048,
-    "kilometros_a_millas": 0.621371,
-    "millas_a_kilometros": 1.60934
+
+conversiones = {
+    "metros_pies": 3.28,
+    "pies_metros": 0.30,            # creamos un diccionario con las conversiones 
+    "kilometros_millas": 0.62,
+    "millas_kilometros": 1.60
 }
 
+# Función para convertir
 def convertir(cantidad, origen, destino):
-    clave = f"{origen}_a_{destino}"
     
-    if clave in factores:
-        factor = factores[clave]
-        resultado = cantidad * factor
-        return resultado
+    # Crear la clave
+    clave = origen + "_" + destino # esto solo es para unir los textos
+
+    # Verificar si existe
+    if clave in conversiones:
+                                        # si existe la conversion en el diccioanrio se hace se hace la conversion
+        # Hacer la conversión
+        resultado = cantidad * conversiones[clave]
+        
+        return resultado    # retornar el resultado
+    
     else:
-        return None
+        return "❌Conversión no disponible❌"       # si escribe una que no esxista en el diccionario envia este mensaje 
 
-print("--- ⚖️ CONVERSOR DE UNIDADES ---")
-cant = float(input("Ingresa la cantidad a convertir: "))
-origen_user = input("Unidad de origen (ej: metros, pies, kilometros): ").strip().lower()
-destino_user = input("Unidad de destino (ej: metros, pies, millas): ").strip().lower()
 
-resultado_conversion = convertir(cant, origen_user, destino_user)
 
-if resultado_conversion is not None:
-    print(f"✅ {cant} {origen_user} equivalen a {resultado_conversion:.2f} {destino_user}.")
-else:
-    print("❌ Error: La conversión solicitada no está registrada en el sistema.")
+print("=== CONVERSOR DE UNIDADES ===")
 
-    
+cantidad = float(input("Ingresa una cantidad: "))
+
+origen = input("Unidad de origen: ")            # aca le pedimos los datos al usuario para poder hacer la conversion
+destino = input("Unidad de destino: ")
+
+# Llamar la función
+resultado = convertir(cantidad, origen, destino)        # aca en esta variable llamammos la funcion que cremos(convertir)
+
+# Mostrar resultado
+print(f"{resultado}✅")        # imprimimos el resultado de la conversion 
+
+
+
