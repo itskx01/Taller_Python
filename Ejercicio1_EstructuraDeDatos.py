@@ -1,7 +1,10 @@
 def analizar_calificaciones(calificaciones): #Aquí se crea una función llamada analizar_calificaciones
     if not calificaciones:
         return (0.0, 0.0, 0.0)
-    
+    """
+    Le estamos diciendo que cree una funcion llamada "analizar_calificaciones" y si no cumple con los valores de la funcion mandar los valores decimales (0.0)
+    """
+
     # 1. Calcular el promedio usando sum() y len()
     promedio = sum(calificaciones) / len(calificaciones)
     
@@ -24,6 +27,9 @@ print("-" * 30)
 # Llamada a la función y desempaquetado de la tupla resultante
 promedio, maxima, minima = analizar_calificaciones(mis_calificaciones)
 
+
+# Mostrar resultados 
+print(f"Resultados del análisis:")
 print("Resultados del análisis:")
 print(f"• Promedio: {promedio:.2f}")
 print(f"• Calificación más alta: {maxima}")
