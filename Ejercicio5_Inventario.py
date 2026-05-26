@@ -1,7 +1,7 @@
 inventario = []
 # Hacmeos un diccionario vaio
 def agregar_producto():
-    nombre = input("Nombre del producto: ").strip().lower()
+    nombre = input("Nombre del producto: ").strip().lower() # Strip es para borrar los espacios en blanco y lower es para evitar que el usuario ponga minusculas y mayusculas eje: ManZaNa
     precio = float(input("Precio del producto: "))
     cantidad = int(input("Cantidad inicial en stock: "))
     
