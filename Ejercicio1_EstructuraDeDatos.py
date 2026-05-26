@@ -1,3 +1,5 @@
+import statistics
+
 def analizar_calificaciones(calificaciones): #Aquí se crea una función llamada analizar_calificaciones
     if not calificaciones:
         return (0.0, 0.0, 0.0)
@@ -5,8 +7,8 @@ def analizar_calificaciones(calificaciones): #Aquí se crea una función llamada
     Le estamos diciendo que cree una funcion llamada "analizar_calificaciones" y si no cumple con los valores de la funcion mandar los valores decimales (0.0)
     """
 
-    # 1. Calcular el promedio usando sum() y len()
-    promedio = sum(calificaciones) / len(calificaciones)
+    # 1. Importamos la libreria statistics para que haga el promedio
+    promedio = statistics.mean(calificaciones)
     
     # 2. Encontrar la calificación más alta y más baja usando max() y min()
     nota_maxima = max(calificaciones)
