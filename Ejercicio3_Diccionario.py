@@ -29,3 +29,4 @@ mostrar_contactos()
 
 nombre_buscar = input("\n¿A quién quieres buscar?: ")
 buscar_contacto(nombre_buscar)
+
