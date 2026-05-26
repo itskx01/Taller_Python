@@ -24,7 +24,8 @@ print("-" * 30)
 # Llamada a la función y desempaquetado de la tupla resultante
 promedio, maxima, minima = analizar_calificaciones(mis_calificaciones)
 
-print(f"Resultados del análisis:")
+print("Resultados del análisis:")
 print(f"• Promedio: {promedio:.2f}")
 print(f"• Calificación más alta: {maxima}")
 print(f"• Calificación más baja: {minima}")
+

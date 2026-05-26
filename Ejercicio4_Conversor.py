@@ -26,3 +26,5 @@ if resultado_conversion is not None:
     print(f"✅ {cant} {origen_user} equivalen a {resultado_conversion:.2f} {destino_user}.")
 else:
     print("❌ Error: La conversión solicitada no está registrada en el sistema.")
+
+    
