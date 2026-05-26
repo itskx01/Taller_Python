@@ -29,7 +29,7 @@ def mostrar_contactos():
 Creamos una funcion llamada "mostrar_contacto" se imprime para despues hacer un bucle for para buscar en el diccionario, el agenda.item hace que entregue en parejas los datos y el for cada que se repite guarda la informacion de las variables 
 """
 
-nom = input("Introduce un nombre: ")
+nom = input("Introduce un nombre: ").lower()
 tel = input("Introduce su teléfono: ")
 # Aca estamos llamando las funciones ya creadas
 añadir_contacto(nom, tel)
@@ -37,6 +37,6 @@ añadir_contacto("Carlos", "3112345678")
 mostrar_contactos()
 
 # Y aca estamos pidiendo que escriba el nombre para encontrarlo en el diccionario
-nombre_buscar = input("\n¿A quién quieres buscar?: ")
+nombre_buscar = input("\n¿A quién quieres buscar?: ").lower()
 buscar_contacto(nombre_buscar)
 
