@@ -1,4 +1,4 @@
-def analizar_calificaciones(calificaciones):
+def analizar_calificaciones(calificaciones): #Aquí se crea una función llamada analizar_calificaciones
     if not calificaciones:
         return (0.0, 0.0, 0.0)
     
