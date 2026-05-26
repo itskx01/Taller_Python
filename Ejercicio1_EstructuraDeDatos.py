@@ -1,7 +1,10 @@
 def analizar_calificaciones(calificaciones):
     if not calificaciones:
         return (0.0, 0.0, 0.0)
-    
+    """
+    Le estamos diciendo que cree una funcion llamada "analizar_calificaciones" y si no cumple con los valores de la funcion mandar los valores decimales (0.0)
+    """
+
     # 1. Calcular el promedio usando sum() y len()
     promedio = sum(calificaciones) / len(calificaciones)
     
